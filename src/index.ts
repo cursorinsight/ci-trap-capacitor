@@ -7,4 +7,5 @@ const CapacitorTrap = registerPlugin<CapacitorTrapPlugin>('CapacitorTrap', {
 });
 
 export * from './definitions';
+export { TrapConfig } from './config';
 export { CapacitorTrap };

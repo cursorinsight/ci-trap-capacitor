@@ -9,6 +9,7 @@ end
 
 target 'Plugin' do
   capacitor_pods
+  pod 'Trap', '1.1.4'
 end
 
 target 'PluginTests' do
