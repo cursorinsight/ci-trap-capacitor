@@ -1,0 +1,7 @@
+{
+  "name": "Capacitor Trap Example",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
