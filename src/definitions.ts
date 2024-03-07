@@ -7,14 +7,15 @@ export interface CapacitorTrapPlugin {
   /**
    * Add custom metadata
    */
-  addCustomMetadata(options: { key: string, value: any }): Promise<void>;
+  addCustomMetadata(options: { key: string; value: any }): Promise<void>;
 
   /**
    * Checks permission for the specific collector. Returns true if the collector
    * has the required permission.
    */
-  checkPermission(options: { collector: CollectorTypes })
-    : Promise<PermissionResult>;
+  checkPermission(options: {
+    collector: CollectorTypes;
+  }): Promise<PermissionResult>;
 
   /**
    * Initialize the plugin
@@ -34,7 +35,7 @@ export interface CapacitorTrapPlugin {
   /**
    * Request permission for the specific collector.
    */
-  requestPermission(options: { collector: CollectorTypes }) : Promise<void>;
+  requestPermission(options: { collector: CollectorTypes }): Promise<void>;
 
   /**
    * Start data collection
