@@ -1,12 +1,73 @@
 # ci-trap-capacitor
 
-Capacitor plugin wrapper over the Android and IOS Trap libraries
+Capacitor plugin wrapper over the Android and IOS Trap libraries.
 
 ## Install
 
 ```bash
 npm install ci-trap-capacitor
 npx cap sync
+```
+
+## Example
+
+With the following code snippets you are able to configure, start, manage and
+stop the data collection.
+
+### Platform specific notes
+
+*   **Android:** There is no need for additional config or user permission to
+    capture data with the specified config (see below).
+
+*   **IOS:** The only requirement is to have the bundle record
+	`NSMotionUsageDescription` defined and filled in to collect Accelerometer,
+	Gravity, Gyroscope and Magnetometer data.
+
+Please note that enabling Bluetooth, GPS and WiFi related features might need
+additional permissions.
+
+### Sample code
+
+```
+// Initialze Trap with the specified config. This should be called only once
+const config = new TrapConfig();
+config.reporter.url = "https://[SERVER_URL]/api/1/submit/{sessionId}/{streamId}"
+config.defaultDataCollection.collectors = [
+  CollectorTypes.Accelerometer,
+  CollectorTypes.Battery,
+  CollectorTypes.Gravity,
+  CollectorTypes.Gyroscope,
+  CollectorTypes.Magnetometer,
+  CollectorTypes.Metadata,
+  CollectorTypes.Pointer,
+  CollectorTypes.Stylus,
+  CollectorTypes.Touch,
+];
+// Use the same config in every scenario
+config.lowBatteryDataCollection = config.defaultDataCollection;
+config.lowDataDataCollection = config.defaultDataCollection;
+await CapacitorTrap.configure({config});
+
+// Specify the userId as custom metadata. It will be active until it is removed
+// explicitly or a new value is set.
+await CapacitorTrap.addCustomMetadata(
+  { key: "userId", value: { type: "email", value: "example@example.hu"}});
+
+// Starts the data collection
+await CapacitorTrap.start();
+
+// Add any custom event, that will be added to the event stream once,
+// immediately when the method is called
+await CapacitorTrap.addCustomEvent({ event: {
+  action: 'gameStarted',
+  game: 'memory'
+}});
+
+// Removes the userId as custom metadata (e.g. user logged out)
+await CapacitorTrap.removeCustomMetadata({ key: "userId" });
+
+// Stops the data collection
+await CapacitorTrap.stop();
 ```
 
 ## API
