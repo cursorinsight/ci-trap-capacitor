@@ -1,6 +1,11 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CapacitorTrapPlugin, CollectorTypes, PermissionResult, TrapConfigurationType } from './definitions';
+import type {
+  CapacitorTrapPlugin,
+  CollectorTypes,
+  PermissionResult,
+  TrapConfigurationType,
+} from './definitions';
 
 export class CapacitorTrapWeb extends WebPlugin implements CapacitorTrapPlugin {
   // eslint-disable-next-line
@@ -9,13 +14,14 @@ export class CapacitorTrapWeb extends WebPlugin implements CapacitorTrapPlugin {
   }
 
   // eslint-disable-next-line
-  addCustomMetadata(options : {key: string, value: any }): Promise<void> {
+  addCustomMetadata(options: { key: string; value: any }): Promise<void> {
     throw new Error('Method not implemented.');
   }
 
   // eslint-disable-next-line
-  checkPermission(options: { collector: CollectorTypes; })
-    : Promise<PermissionResult> {
+  checkPermission(options: {
+    collector: CollectorTypes;
+  }): Promise<PermissionResult> {
     throw new Error('Method not implemented.');
   }
 
@@ -24,17 +30,17 @@ export class CapacitorTrapWeb extends WebPlugin implements CapacitorTrapPlugin {
   }
 
   // eslint-disable-next-line
-  configure(options: { config: TrapConfigurationType } ): Promise<void> {
+  configure(options: { config: TrapConfigurationType }): Promise<void> {
     throw new Error('Method not implemented.');
   }
 
   // eslint-disable-next-line
-  removeCustomMetadata(options : { key: string }): Promise<void> {
+  removeCustomMetadata(options: { key: string }): Promise<void> {
     throw new Error('Method not implemented.');
   }
 
   // eslint-disable-next-line
-  requestPermission(options: { collector: CollectorTypes; }) : Promise<void> {
+  requestPermission(options: { collector: CollectorTypes }): Promise<void> {
     throw new Error('Method not implemented.');
   }
 

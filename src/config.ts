@@ -4,9 +4,9 @@ import type { TrapConfigurationType } from './definitions';
 import { CollectorTypes } from './definitions';
 
 const reporterConfig = {
-  apiKeyName: "graboxy-api-key",
+  apiKeyName: 'graboxy-api-key',
 
-  apiKeyValue: "api-key-value",
+  apiKeyValue: 'api-key-value',
 
   cachedTransport: true,
 
@@ -18,7 +18,7 @@ const reporterConfig = {
 
   maxFileCacheSize: 5_000_000,
 
-  url: "https://trap.graboxy.com/api/1/submit/{sessionId}/{streamId}",
+  url: 'https://trap.graboxy.com/api/1/submit/{sessionId}/{streamId}',
 
   readTimeout: 500,
 
@@ -105,11 +105,10 @@ const reducedCollector = {
 
   metadataSubmissionInterval: 60_000,
 
-  useGestureRecognizer: true
+  useGestureRecognizer: true,
 };
 
-export class TrapConfig implements TrapConfigurationType
-{
+export class TrapConfig implements TrapConfigurationType {
   defaultDataCollection = defaultCollector;
 
   lowBatteryDataCollection = reducedCollector;
