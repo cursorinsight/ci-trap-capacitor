@@ -23,6 +23,12 @@ const reporterConfig = {
   readTimeout: 500,
 
   sessionId: uuidv4(),
+
+  idleTimeout: 2000,
+
+  bufferTimeout: 120_000,
+
+  bufferSizeLimit: 3600,
 };
 
 const defaultCollector = {
