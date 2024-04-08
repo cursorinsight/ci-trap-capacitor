@@ -263,18 +263,21 @@ Stop data collection
 
 #### ReporterConfigurationType
 
-| Prop                   | Type                 | Description                                                                                                                                                                                  |
-| ---------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`apiKeyName`**       | <code>string</code>  | Name of the api key sent in the HTTP header                                                                                                                                                  |
-| **`apiKeyValue`**      | <code>string</code>  | Value of the api key sent in the HTTP header                                                                                                                                                 |
-| **`cachedTransport`**  | <code>boolean</code> | Whether to cache data packets on the device when connection to the remote server cannot be established.                                                                                      |
-| **`compress`**         | <code>boolean</code> | Whether to compress the data sent to the server. If true GZIP compression is used.                                                                                                           |
-| **`connectTimeout`**   | <code>number</code>  | The connect timeout for the HTTP transport in milliseconds.                                                                                                                                  |
-| **`interval`**         | <code>number</code>  | The time interval the reporter task runs with.                                                                                                                                               |
-| **`maxFileCacheSize`** | <code>number</code>  | About how much space on the device can be used to store unsent data packets. The lib might use a little more space than this value in case the data packet size exceeds the remaining space. |
-| **`readTimeout`**      | <code>number</code>  | The read timeout for the HTTP transport in milliseconds.                                                                                                                                     |
-| **`sessionId`**        | <code>string</code>  | The persistent session id to send in the header frame. Must be set manually with a custom config class!                                                                                      |
-| **`url`**              | <code>string</code>  | The URL to send the data packets to.                                                                                                                                                         |
+| Prop                   | Type                        | Description                                                                                                                                                                                  |
+| ---------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`apiKeyName`**       | <code>string</code>         | Name of the api key sent in the HTTP header                                                                                                                                                  |
+| **`apiKeyValue`**      | <code>string</code>         | Value of the api key sent in the HTTP header                                                                                                                                                 |
+| **`bufferSizeLimit`**  | <code>number \| null</code> | Default maximum buffer size in number of events (in web collector)                                                                                                                           |
+| **`bufferTimeout`**    | <code>number \| null</code> | Default timeout for sending the buffer automatically in milliseconds (in the web collector)                                                                                                  |
+| **`cachedTransport`**  | <code>boolean</code>        | Whether to cache data packets on the device when connection to the remote server cannot be established.                                                                                      |
+| **`compress`**         | <code>boolean</code>        | Whether to compress the data sent to the server. If true GZIP compression is used.                                                                                                           |
+| **`connectTimeout`**   | <code>number</code>         | The connect timeout for the HTTP transport in milliseconds.                                                                                                                                  |
+| **`idleTimeout`**      | <code>number \| null</code> | Default idle timeout in milliseconds (in the web collector).                                                                                                                                 |
+| **`interval`**         | <code>number</code>         | The time interval the reporter task runs with.                                                                                                                                               |
+| **`maxFileCacheSize`** | <code>number</code>         | About how much space on the device can be used to store unsent data packets. The lib might use a little more space than this value in case the data packet size exceeds the remaining space. |
+| **`readTimeout`**      | <code>number</code>         | The read timeout for the HTTP transport in milliseconds.                                                                                                                                     |
+| **`sessionId`**        | <code>string</code>         | The persistent session id to send in the header frame. Must be set manually with a custom config class!                                                                                      |
+| **`url`**              | <code>string</code>         | The URL to send the data packets to.                                                                                                                                                         |
 
 
 ### Enums

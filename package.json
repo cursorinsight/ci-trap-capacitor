@@ -1,6 +1,6 @@
 {
   "name": "ci-trap-capacitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Capacitor plugin wrapper over the Android and IOS Trap libraries",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -51,6 +51,7 @@
     "@ionic/eslint-config": "^0.3.0",
     "@ionic/prettier-config": "^1.0.1",
     "@ionic/swiftlint-config": "^1.1.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/uuid": "^9.0.8",
     "eslint": "^7.11.0",
@@ -79,6 +80,7 @@
   },
   "dependencies": {
     "@capacitor/cli": "^5.7.0",
+    "ci-trap-web": "^1.0.6",
     "uuid": "^9.0.1"
   }
 }

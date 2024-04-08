@@ -1,4 +1,9 @@
+import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+
+const commonjsOptions = {
+  include: /node_modules/,
+};
 
 export default {
   input: 'dist/esm/index.js',
@@ -20,6 +25,6 @@ export default {
       inlineDynamicImports: true,
     },
   ],
-  plugins: [nodeResolve()],
+  plugins: [nodeResolve(), commonjs(commonjsOptions)],
   external: ['@capacitor/core'],
 };

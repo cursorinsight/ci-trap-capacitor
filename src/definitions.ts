@@ -157,6 +157,17 @@ export interface ReporterConfigurationType {
   apiKeyValue: string;
 
   /**
+   * Default maximum buffer size in number of events (in web collector)
+   */
+  bufferSizeLimit: number | null;
+
+  /**
+   *  Default timeout for sending the buffer automatically in milliseconds (in
+   *  the web collector)
+   */
+  bufferTimeout: number | null;
+
+  /**
    * Whether to cache data packets on the device
    * when connection to the remote server cannot be
    * established.
@@ -174,6 +185,11 @@ export interface ReporterConfigurationType {
    * in milliseconds.
    */
   connectTimeout: number;
+
+  /**
+   * Default idle timeout in milliseconds (in the web collector).
+   */
+  idleTimeout: number | null;
 
   /**
    * The time interval the reporter task runs with.
