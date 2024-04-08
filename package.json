@@ -1,6 +1,6 @@
 {
   "name": "ci-trap-capacitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Capacitor plugin wrapper over the Android and IOS Trap libraries",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
