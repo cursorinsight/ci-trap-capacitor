@@ -1,4 +1,4 @@
-package com.cursorinsight.trap
+package com.cursorinsight.trap.capacitor
 
 import com.cursorinsight.trap.TrapConfig
 import com.cursorinsight.trap.TrapManager

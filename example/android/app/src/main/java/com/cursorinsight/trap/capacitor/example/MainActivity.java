@@ -1,8 +1,8 @@
-package com.cursorinsight.trap.capacitor_example;
+package com.cursorinsight.trap.capacitor.example;
 
 import android.os.Bundle;
 
-import com.cursorinsight.trap.CapacitorTrapPlugin;
+import com.cursorinsight.trap.capacitor.CapacitorTrapPlugin;
 import com.getcapacitor.BridgeActivity;
 
 public class MainActivity extends BridgeActivity {
