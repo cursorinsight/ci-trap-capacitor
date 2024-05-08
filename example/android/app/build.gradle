@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.cursorinsight.trap.capacitor_example"
+    namespace "com.cursorinsight.trap.capacitor.example"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.cursorinsight.trap.capacitor_example"
+        applicationId "com.cursorinsight.trap.capacitor.example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
